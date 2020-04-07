@@ -1,5 +1,10 @@
-{% do assets.addJs('plugin://tabs/js/tabs.js', {loading:'defer'}) %}
 {% set cfg = config.plugins.tabs %}
+
+{% if cfg.defer_js %}
+	{% do assets.addJs('plugin://tabs/js/tabs.js', {loading:'defer'}) %}
+{% else %}
+	{% do assets.addJs('plugin://tabs/js/tabs.js') %}
+{% endif %}
 
 {% set nav = cfg.nav_element %}
 {% set tab = cfg.tab_element %}

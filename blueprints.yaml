@@ -9,7 +9,7 @@ homepage: https://github.com/domsson/grav-plugin-tabs
 keywords: grav, plugin, tabs
 bugs: https://github.com/domsson/grav-plugin-tabs/issues
 docs: https://github.com/domsson/grav-plugin-tabs/blob/develop/README.md
-license: CC0
+license: MIT 
 
 dependencies:
   - { name: grav, version: '>=1.6.0' }

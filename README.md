@@ -1,6 +1,13 @@
 # Tabs Plugin
 
-The **Tabs** Plugin is an extension for [Grav CMS](https://github.com/getgrav/grav). It adds partial template and blueprint files that enable the rendering of content in tabs by using [tabs.js](https:/github.com/domsson/tabs.js).
+The **Tabs** Plugin is an extension for [Grav CMS](https://github.com/getgrav/grav). It adds partial template and blueprint files that enable the rendering of content in tabs by using [tabs.js](https:/github.com/domsson/tabs.js). For details on features, check over there.
+
+Note that the Grav Team also provides tab functionality with their [Shortcode UI Plugin](https://github.com/getgrav/grav-plugin-shortcode-ui). Some pointers that can help you decide which one suits you better: 
+
+- This plugin provides tabs - and nothing else
+- This plugin does not use shortcodes, it reads tabs from the Page Frontmatter
+- Tabs created with this plugin can retain their state via URL fragments
+- Tabs created with this plugin degradge gracefully for users withut JS (haven't tested the shortcode version in this regard)
 
 ## Installation
 

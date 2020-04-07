@@ -39,7 +39,7 @@ form:
       type: toggle
       label: PLUGIN_TABS.BUILT_IN_CSS
       highlight: 1
-      default: 0
+      default: 1
       options:
         1: PLUGIN_ADMIN.ENABLED
         0: PLUGIN_ADMIN.DISABLED 
@@ -51,6 +51,10 @@ form:
       type: text
       label: PLUGIN_TABS.NAV_ELEMENT
       default: "ul"
+    nav_class:
+      type: text
+      label: PLUGIN_TABS.NAV_CLASS
+      default: "tab-nav"
     tab_element:
       type: text
       label: PLUGIN_TABS.TAB_ELEMENT
@@ -67,6 +71,10 @@ form:
       type: text
       label: PLUGIN_TABS.TAB_CLASS_HIDDEN
       default: "hidden"
+    btn_class:
+      type: text
+      label: PLUGIN_TABS.BTN_CLASS
+      default: "tab-button"
     btn_class_active:
       type: text
       label: PLUGIN_TABS.BTN_CLASS_ACTIVE

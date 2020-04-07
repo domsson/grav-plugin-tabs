@@ -1,0 +1,31 @@
+.tab-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	border-bottom: 1px solid #ccc;
+}
+
+.tab-button {
+	user-select: none;
+	margin-bottom: -1px;
+}
+
+.tab-button a {
+	display: block;
+	padding: .5rem 1rem;
+	text-decoration: none;
+	color: #999;
+}
+
+.tab-button.active {
+	border-bottom: 1px solid #333;
+}
+
+.tab-button.active a {
+	color: inherit;
+}
+
+.tab.hidden {
+	display: none;
+}

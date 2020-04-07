@@ -4,10 +4,12 @@ en:
         BUILT_IN_CSS: "Use built-in CSS styles"
         TABSET_ATTRIBUTE: "Attribute name for the tab set"
         NAV_ELEMENT: "HTML element for the tab navigation"
+        NAV_CLASS: "CSS class for the tab navigation"
         TAB_ELEMENT: "HTML element for the tabs"
         TAB_CLASS: "CSS class for all tabs"
         TAB_CLASS_ACTIVE: "CSS class for active tabs"
         TAB_CLASS_HIDDEN: "CSS class for hidden tabs"
+        BTN_CLASS: "CSS class for all tab buttons"
         BTN_CLASS_ACTIVE: "CSS class for active buttons"
 
 de:
@@ -16,8 +18,10 @@ de:
         BUILT_IN_CSS: "Nutze mitgelieferte CSS styles"
         TABSET_ATTRIBUTE: "HTML Attribut fuer ein Tab-Set"
         NAV_ELEMENT: "HTML Element fuer die Tab Navigation"
+        NAV_CLASS: "CSS Klasse fuer die Tab Navigation"
         TAB_ELEMENT: "HTML Element fuer die Tabs"
         TAB_CLASS: "CSS Klasse fuer alle Tabs"
         TAB_CLASS_ACTIVE: "CSS Klasse fuer aktive Tabs"
         TAB_CLASS_HIDDEN: "CSS Klasse fuer inaktive Tabs"
+        BTN_CLASS: "CSS Klasse fuer alle Buttons"
         BTN_CLASS_ACTIVE: "CSS Klasse fuer aktive Buttons"

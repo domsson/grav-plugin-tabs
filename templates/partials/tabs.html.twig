@@ -6,22 +6,24 @@
 	{% do assets.addJs('plugin://tabs/js/tabs.js') %}
 {% endif %}
 
-{% set nav = cfg.nav_element %}
-{% set tab = cfg.tab_element %}
+{% if cfg.built_in_css %}
+	{% do assets.addCSS('plugin://tabs/css/tabs.css') %}
+{% endif %}
+
 {% set set_name = page.slug %}
 
-<{{ nav }} data-tabs="{{ set_name }}">
+<{{ cfg.nav_element }} data-tabs="{{ set_name }}">
 {% for tab in page.header.tabs %}
 	{% set tab_name = tab.title|hyphenize %}
 	<li><a href="#{{ set_name }}_{{ tab_name }}">{{ tab.title }}</a></li>
 {% endfor %}
-</{{ nav }}>
+</{{ cfg.nav_element }}>
 	
 {% for tab in page.header.tabs %}
 {% set tab_name = tab.title|hyphenize %}
-<{{ tab }} id="{{ set_name }}_{{ tab_name }}">
+<{{ cfg.tab_element }} id="{{ set_name }}_{{ tab_name }}">
 	{{ tab.content|markdown }}
-</{{ tab }}>	
+</{{ cfg.tab_element }}>	
 {% endfor %}
 
 <script>
@@ -29,9 +31,11 @@
 		(new Tabs({
 			"attr": "{{ cfg.tabset_attribute }}",
 			"name": "{{ set_name }}",
+			"nav_class": "{{ cfg.nav_class }}",
 			"tab_class": "{{ cfg.tab_class }}",
 			"tab_active": "{{ cfg.tab_class_active }}",
 			"tab_hidden": "{{ cfg.tab_class_hidden }}",
+			"btn_class":  "{{ cfg.btn_class }}",
 			"btn_active": "{{ cfg.btn_class_active }}"
 		})).init();
 	});

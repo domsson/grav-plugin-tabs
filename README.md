@@ -1,8 +1,6 @@
 # Tabs Plugin
 
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of the plugin.**
-
-The **Tabs** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). Adds a modular page type that can render content in tabs
+The **Tabs** Plugin is an extension for [Grav CMS](https://github.com/getgrav/grav). It adds partial template and blueprint files that enable the rendering of content in tabs by using [tabs.js](https:/github.com/domsson/tabs.js).
 
 ## Installation
 
@@ -10,7 +8,7 @@ Installing the Tabs plugin can be done in one of three ways: The GPM (Grav Packa
 
 ### GPM Installation (Preferred)
 
-To install the plugin via the [GPM](http://learn.getgrav.org/advanced/grav-gpm), through your system's terminal (also called the command line), navigate to the root of your Grav-installation, and enter:
+To install the plugin via the [GPM](https://learn.getgrav.org/advanced/grav-gpm), through your system's terminal (also called the command line), navigate to the root of your Grav-installation, and enter:
 
     bin/gpm install tabs
 
@@ -18,14 +16,12 @@ This will install the Tabs plugin into your `/user/plugins`-directory within Gra
 
 ### Manual Installation
 
-To install the plugin manually, download the zip-version of this repository and unzip it under `/your/site/grav/user/plugins`. Then rename the folder to `tabs`. You can find these files on [GitHub](https://github.com//grav-plugin-tabs) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
+To install the plugin manually, download the zip-version of this repository and unzip it under `/your/site/grav/user/plugins`. Then rename the folder to `tabs`. You can find these files on [GitHub](https://github.com//grav-plugin-tabs) or via [GetGrav.org](https://getgrav.org/downloads/plugins#extras).
 
 You should now have all the plugin files under
 
     /your/site/grav/user/plugins/tabs
 	
-> NOTE: This plugin is a modular component for Grav which may require other plugins to operate, please see its [blueprints.yaml-file on GitHub](https://github.com//grav-plugin-tabs/blob/master/blueprints.yaml).
-
 ### Admin Plugin
 
 If you use the Admin Plugin, you can install the plugin directly by browsing the `Plugins`-menu and clicking on the `Add` button.
@@ -44,13 +40,34 @@ Note that if you use the Admin Plugin, a file with your configuration named tabs
 
 ## Usage
 
-**Describe how to use the plugin.**
+First, define the tabs in the page headers. Example:
 
-## Credits
+    tabs:
+        -
+            title: "Features"
+            content: "The content field will be processed via **markdown**"
+        -
+            title: "Help"
+            content: "For help, visit [the repository](https://github.com/domsson/grav-plugin-tabs)"
 
-**Did you incorporate third-party code? Want to thank somebody?**
+Second, use the provided partial template in your page template:
+
+    {% include "/partials/tabs.htwml.twig" %}
+
+Optionally, you can also use the provided partial blueprint. For example, in your page bluerint:
+
+    forms:
+        fields:
+            tabs:
+                fields:
+                    tabs:
+                        type: tab
+                        title: Tabs
+                        import@:
+                            type: partials/tabs
+                            context: blueprints://
 
 ## To Do
 
-- [ ] Future plans, if any
+- [ ] Provide some simple, built-in CSS as a starting point
 

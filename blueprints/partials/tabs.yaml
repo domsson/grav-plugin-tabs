@@ -1,0 +1,14 @@
+form:
+    fields:
+        header.tabs:
+            name: Tabs
+            type: list
+            label: Tabs
+            fields:
+                .title:
+                    type: text
+                    label: Title
+                .content:
+                    type: editor
+                    label: Content
+

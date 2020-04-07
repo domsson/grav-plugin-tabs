@@ -1,0 +1,73 @@
+name: Tabs
+version: 0.1.0
+description: "Enables rendering content as tabs via partial templates/blueprints"
+icon: folder
+author:
+  name: Julien Dau
+  email: julien.d.dau@gmail.com
+homepage: https://github.com/domsson/grav-plugin-tabs
+keywords: grav, plugin, tabs
+bugs: https://github.com/domsson/grav-plugin-tabs/issues
+docs: https://github.com/domsson/grav-plugin-tabs/blob/develop/README.md
+license: CC0
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    defer_js:
+      type: toggle
+      label: PLUGIN_TABS.DEFER_JS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+    built_in_css: 
+      type: toggle
+      label: PLUGIN_TABS.BUILT_IN_CSS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED 
+    tabset_attribute:
+      type: text
+      label: PLUGIN_TABS.TABSET_ATTRIBUTE
+      default: "data-tabs"
+    nav_element:
+      type: text
+      label: PLUGIN_TABS.NAV_ELEMENT
+      default: "ul"
+    tab_element:
+      type: text
+      label: PLUGIN_TABS.TAB_ELEMENT
+      default: "div"
+    tab_class:
+      type: text
+      label: PLUGIN_TABS.TAB_CLASS
+      default: "tab"
+    tab_class_active:
+      type: text
+      label: PLUGIN_TABS.TAB_CLASS_ACTIVE
+      default: "active"
+    tab_class_hidden:
+      type: text
+      label: PLUGIN_TABS.TAB_CLASS_HIDDEN
+      default: "hidden"
+    btn_class_active:
+      type: text
+      label: PLUGIN_TABS.BTN_CLASS_ACTIVE
+      default: "active"

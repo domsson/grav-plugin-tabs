@@ -1,0 +1,33 @@
+{% do assets.addJs('plugin://tabs/js/tabs.js', {loading:'defer'}) %}
+{% set cfg = config.plugins.tabs %}
+
+{% set nav = cfg.nav_element %}
+{% set tab = cfg.tab_element %}
+{% set set_name = page.slug %}
+
+<{{ nav }} data-tabs="{{ set_name }}">
+{% for tab in page.header.tabs %}
+	{% set tab_name = tab.title|hyphenize %}
+	<li><a href="#{{ set_name }}_{{ tab_name }}">{{ tab.title }}</a></li>
+{% endfor %}
+</{{ nav }}>
+	
+{% for tab in page.header.tabs %}
+{% set tab_name = tab.title|hyphenize %}
+<{{ tab }} id="{{ set_name }}_{{ tab_name }}">
+	{{ tab.content|markdown }}
+</{{ tab }}>	
+{% endfor %}
+
+<script>
+	document.addEventListener('DOMContentLoaded', (event) => {
+		(new Tabs({
+			"attr": "{{ cfg.tabset_attribute }}",
+			"name": "{{ set_name }}",
+			"tab_class": "{{ cfg.tab_class }}",
+			"tab_active": "{{ cfg.tab_class_active }}",
+			"tab_hidden": "{{ cfg.tab_class_hidden }}",
+			"btn_active": "{{ cfg.btn_class_active }}"
+		})).init();
+	});
+</script>

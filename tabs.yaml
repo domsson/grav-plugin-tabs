@@ -1,0 +1,12 @@
+enabled: true
+active: true
+
+defer_js: true
+built_in_css: false
+tabset_attribute: "data-tabs"
+nav_element: "ul"
+tab_element: "div"
+tab_class: "tab"
+tab_class_active: "active"
+tab_class_hidden: "hidden"
+btn_class_active: "active"

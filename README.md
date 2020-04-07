@@ -44,7 +44,7 @@ enabled: true
 active: true
 
 defer_js: true
-built_in_css: false
+built_in_css: true 
 tabset_attribute: "data-tabs"
 nav_element: "ul"
 nav_class: "tab-nav"
@@ -57,7 +57,7 @@ btn_class_active: "active"
 ```
 
 - `defer_js`: Use the `defer` attribute to load `tabs.js` after the page has loaded
-- `built_in_css`: (currently not implemented) Apply some basic CSS to the tabs
+- `built_in_css`: Apply some basic CSS to the tabs (adds `tabs.css` to the page)
 - `tabset_attribute`: HTML attribute to use for the tab sets
 - `nav_element`: HTML element to use for the tab navigation
 - `nav_class`: CSS class to add to the tab navigation

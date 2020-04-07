@@ -34,9 +34,30 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
+active: true
+
+defer_js: true
+built_in_css: false
+tabset_attribute: "data-tabs"
+nav_element: "ul"
+tab_element: "div"
+tab_class: "tab"
+tab_class_active: "active"
+tab_class_hidden: "hidden"
+btn_class_active: "active"
 ```
 
-Note that if you use the Admin Plugin, a file with your configuration named tabs.yaml will be saved in the `user/config/plugins/`-folder once the configuration is saved in the Admin.
+- `defer_js`: Use the `defer` attribute to load `tabs.js` after the page has loaded
+- `built_in_css`: (currently not implemented) Apply some basic CSS to the tabs
+- `tabset_attribute`: HTML attribute to use for the tab sets
+- `nav_element`: HTML element to use for the tab navigation
+- `tab_element`: HTML element to use for tab elements
+- `tab_class`: CSS class to add to each tab element
+- `tab_class_active`: CSS class to add to the currently visible tab
+- `tab_class_hidden`: CSS class to add to all currently hidden tabs
+- `btn_class_active`: CSS class to add to the currently active tab button
+
+If you use the Admin Plugin, a file with your configuration named `tabs.yaml` will be saved in the `user/config/plugins/`-folder once the configuration is saved in the Admin.
 
 ## Usage
 
@@ -54,7 +75,7 @@ Second, use the provided partial template in your page template:
 
     {% include "/partials/tabs.htwml.twig" %}
 
-Optionally, you can also use the provided partial blueprint. For example, in your page bluerint:
+Optionally, you can also use the provided partial blueprint. For example, in your page blueprint:
 
     forms:
         fields:

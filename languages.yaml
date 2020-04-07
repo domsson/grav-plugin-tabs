@@ -11,7 +11,9 @@ en:
         TAB_CLASS_HIDDEN: "CSS class for hidden tabs"
         BTN_CLASS: "CSS class for all tab buttons"
         BTN_CLASS_ACTIVE: "CSS class for active buttons"
-
+        ADMIN:
+          TAB_TITLE: "Title"
+          TAB_CONTENT: "Content"
 de:
     PLUGIN_TABS:
         DEFER_JS: "Lade Javascript via 'defer'"
@@ -25,3 +27,6 @@ de:
         TAB_CLASS_HIDDEN: "CSS Klasse fuer inaktive Tabs"
         BTN_CLASS: "CSS Klasse fuer alle Buttons"
         BTN_CLASS_ACTIVE: "CSS Klasse fuer aktive Buttons"
+        ADMIN:
+          TAB_TITLE: "Titel"
+          TAB_CONTENT: "Inhalt"

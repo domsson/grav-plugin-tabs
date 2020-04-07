@@ -7,8 +7,8 @@ form:
             fields:
                 .title:
                     type: text
-                    label: Title
+                    label: PLUGIN_TABS.ADMIN.TAB_TITLE
                 .content:
                     type: editor
-                    label: Content
+                    label: PLUGIN_TABS.ADMIN.TAB_CONTENT
 

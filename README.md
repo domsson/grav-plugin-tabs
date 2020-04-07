@@ -99,7 +99,4 @@ Optionally, you can also use the provided partial blueprint. For example, in you
                             type: partials/tabs
                             context: blueprints://
 
-## To Do
-
-- [ ] Provide some simple, built-in CSS as a starting point
 

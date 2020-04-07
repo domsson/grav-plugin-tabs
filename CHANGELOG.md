@@ -1,3 +1,9 @@
+# v0.2.1
+## 2020-04-07
+
+1. [](#improved)
+    * Hardcoded string in the blueprint are now coming from the language file
+
 # v0.2.0
 ## 2020-04-07
 

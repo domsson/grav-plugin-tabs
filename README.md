@@ -84,7 +84,7 @@ First, define the tabs in the page headers. Example:
 
 Second, use the provided partial template in your page template:
 
-    {% include "/partials/tabs.htwml.twig" %}
+    {% include "/partials/tabs.html.twig" %}
 
 Optionally, you can also use the provided partial blueprint. For example, in your page blueprint:
 

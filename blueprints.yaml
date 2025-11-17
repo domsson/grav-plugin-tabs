@@ -1,5 +1,5 @@
 name: Tabs
-version: 0.1.0
+version: 0.3.1
 description: "Enables rendering content as tabs via partial templates/blueprints"
 icon: folder
 author:

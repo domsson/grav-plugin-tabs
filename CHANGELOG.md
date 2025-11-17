@@ -1,3 +1,9 @@
+# v0.3.1
+## 2025-11-17
+
+1. [](#improved)
+    * Fixed crash caused by `autoload()` method trying to scan `vendor` directory when it doesn't exist
+
 # v0.2.1
 ## 2020-04-07
 

@@ -97,6 +97,6 @@ Optionally, you can also use the provided partial blueprint. For example, in you
                         title: Tabs
                         import@:
                             type: partials/tabs
-                            context: blueprints://
+                            context: plugins://tabs/blueprints
 
 

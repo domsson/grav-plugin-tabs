@@ -1,3 +1,11 @@
+# v0.3.2
+## 2025-11-27
+
+1. [](#improved)
+    * Remove unused and unnecessary code from tabs.php
+2. [](#bugfix)
+    * Put `cfg.attribute` to use in the HTML; was hardcoded to `data-tabs` before
+
 # v0.3.1
 ## 2025-11-27
 

@@ -2,7 +2,6 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
-use RocketTheme\Toolbox\Event\Event;
 
 /**
  * Class TabsPlugin
@@ -12,49 +11,20 @@ class TabsPlugin extends Plugin
 {
     /**
      * @return array
-     *
-     * The getSubscribedEvents() gives the core a list of events
-     *     that the plugin wants to listen to. The key of each
-     *     array section is the event that the plugin listens to
-     *     and the value (in the form of an array) contains the
-     *     callable (or function) as well as the priority. The
-     *     higher the number the higher the priority.
      */
     public static function getSubscribedEvents()
     {
         return [
-            'onPluginsInitialized' => ['onPluginsInitialized', 0],
 	    'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-            //'onGetPageBlueprints' => ['onGetPageBlueprints', 0]
         ];
     }
 
     /**
-     * Initialize the plugin
-     */
-    public function onPluginsInitialized()
-    {
-        if ($this->isAdmin()) {
-            $this->enable([
-                'onGetPageBlueprints' => ['onGetPageBlueprints', 0] 
-            ]);
-        }
-    }
-
-    /**
-     * Add current directory to twig lookup paths.
+     * Add this plugin's templates directory to the twig lookup paths.
      */
     public function onTwigTemplatePaths()
     {
         $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
     }
 
-    /**
-     * Add blueprint directory.
-     */
-    public function onGetPageBlueprints(Event $event)
-    {
-        $types = $event->types;
-        $types->scanBlueprints('plugin://' . $this->name . '/blueprints');
-    }
 }

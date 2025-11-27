@@ -8,7 +8,7 @@ author:
 homepage: https://github.com/domsson/grav-plugin-tabs
 keywords: grav, plugin, tabs
 bugs: https://github.com/domsson/grav-plugin-tabs/issues
-docs: https://github.com/domsson/grav-plugin-tabs/blob/develop/README.md
+docs: https://github.com/domsson/grav-plugin-tabs/blob/master/README.md 
 license: MIT 
 
 dependencies:

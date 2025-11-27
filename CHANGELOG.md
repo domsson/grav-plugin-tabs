@@ -1,8 +1,9 @@
 # v0.3.1
-## 2025-11-26
+## 2025-11-27
 
 1. [](#improved)
     * Retroactively remove v0.2.0 and v0.2.1 into v0.3.0 to hopefully fix issues with GPM
+    * Remove `composer.json` since we're not using composer for this plugin
 
 # v0.3.0
 ## 2025-11-17

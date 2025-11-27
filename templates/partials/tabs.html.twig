@@ -12,7 +12,7 @@
 
 {% set set_name = page.slug %}
 
-<{{ cfg.nav_element }} data-tabs="{{ set_name }}">
+<{{ cfg.nav_element }} {{ cfg.tabset_attribute }}="{{ set_name }}">
 {% for tab in page.header.tabs %}
 	{% set tab_name = tab.title|hyphenize %}
 	<li><a href="#{{ set_name }}_{{ tab_name }}">{{ tab.title }}</a></li>
